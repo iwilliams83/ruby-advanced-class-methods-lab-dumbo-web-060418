@@ -68,7 +68,7 @@ class Song
   end
 
   def self.destroy_all
-    @all.cear 
+    @all.cear
   end
 
 end
