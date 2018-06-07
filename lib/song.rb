@@ -38,6 +38,7 @@ class Song
     song = self.new
     song.name = (file_name[1].split('.'))[0]
     song.artist_name = file_name[0]
+    song.save
     song
   end
 
