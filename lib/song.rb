@@ -16,6 +16,7 @@ class Song
     song = self.new
     song.name = name
     puts song
+    puts self.name
 
   end
 
