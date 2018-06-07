@@ -42,6 +42,14 @@ class Song
     end
   end
 
+  def self.new_from_filename(file_name)
+    file_name = file_name.split(' - ')
+    song = self.new
+    song.name = (file_name[1].split('.'))[0]
+    song.artist_name = file_name[0]
+    song
+  end
+
   def self.create_from_filename(file_name)
     file_name = file_name.split(' - ')
     song = self.new
@@ -54,6 +62,8 @@ class Song
   def self.alphabetical
     @@all.sort_by{|song| song.name}
   end
+
+
 
   def save
     self.class.all << self
