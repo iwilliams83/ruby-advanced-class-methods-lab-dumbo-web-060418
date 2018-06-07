@@ -63,10 +63,12 @@ class Song
     @@all.sort_by{|song| song.name}
   end
 
-
-
   def save
     self.class.all << self
+  end
+
+  def self.destroy_all
+    @all.cear 
   end
 
 end
