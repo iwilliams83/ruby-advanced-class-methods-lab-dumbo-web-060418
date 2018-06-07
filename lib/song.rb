@@ -64,7 +64,7 @@ class Song
   end
 
   def self.destroy_all
-    self.class.all.cear
+    #self.class.all.cear
   end
 
 end
