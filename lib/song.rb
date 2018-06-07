@@ -33,6 +33,14 @@ class Song
     self.all.detect{|song| song.name == song_name}
   end
 
+  def self.create_from_filename(file_name)
+    file_name = file_name.split(' - ')
+    song_name = (file_name[1].split('.'))[0]
+    artist_name = file_name[0]
+    puts "song name = #{song_name}"
+    puts "artist name = #{artist_name}"
+  end
+
   def save
     self.class.all << self
   end
