@@ -42,8 +42,6 @@ class Song
     end
   end
 
-  
-
   def self.create_from_filename(file_name)
     file_name = file_name.split(' - ')
     song = self.new
@@ -51,6 +49,10 @@ class Song
     song.artist_name = file_name[0]
     song.save
     song
+  end
+
+  def self.alphabetical
+    puts @@all
   end
 
   def save
